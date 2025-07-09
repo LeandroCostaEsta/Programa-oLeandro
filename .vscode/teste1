@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int idade, quantidade;
+    float altura;
+    char letra;
+    char nome[100];
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    printf("Digite a quantidade: ");
+    scanf("%d", &quantidade);
+
+    printf("Digite sua altura (use ponto): ");
+    scanf("%f", &altura);
+
+    // Limpa o buffer antes de ler um caractere
+    while ((getchar()) != '\n');
+
+    printf("Digite uma letra: ");
+    scanf("%c", &letra);
+
+    // Limpa o buffer antes de ler a string
+    while ((getchar()) != '\n');
+
+    printf("Digite seu nome: ");
+    fgets(nome, 100, stdin);
+
+    printf("Idade: %d\n", idade);
+    printf("Quantidade: %d\n", quantidade);
+    printf("Altura: %.2f\n", altura);
+    printf("Letra: %c\n", letra);
+    printf("Nome: %s\n", nome);
+
+    return 0;
+}
